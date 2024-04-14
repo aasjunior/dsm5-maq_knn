@@ -26,7 +26,7 @@
 
 - `encode_labels(self, model)`: Esta função recebe o modelo de dados como entrada e codifica os rótulos da categoria usando o `LabelEncoder` do scikit-learn. Retorna os rótulos codificados.
 
-- `normalize_data(self)`: Esta função recebe o modelo de dados como entrada e realiza várias operações para normalizar os dados:
+- `normalize_data(model)`: Esta função recebe o modelo de dados como entrada e realiza várias operações para normalizar os dados:
     - Aplica a função `preprocess_message` a cada mensagem no modelo de dados.
     - Transforma as mensagens em vetores TF-IDF usando o `TfidfVectorizer` do scikit-learn.
     - Normaliza os vetores TF-IDF para o intervalo [0, 1] usando o `MinMaxScaler` do scikit-learn.
