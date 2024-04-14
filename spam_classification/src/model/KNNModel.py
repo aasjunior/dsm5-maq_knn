@@ -15,14 +15,14 @@ class KNNModel:
             self.knn.fit(X_train, Y_train)
         
         except Exception as e:
-            raise Exception(f'Ocorreu um erro no treinamento: {e}')
+            raise Exception(f'Erro no treinamento: {e}')
 
     def predict(self, X_test):
         try:
             return self.knn.predict(X_test)
      
         except Exception as e:
-            raise Exception(f'Ocorreu um erro na previsão: {e}')
+            raise Exception(f'Erro na previsão: {e}')
 
 
     def evaluate(self, Y_test, predictions):
@@ -31,7 +31,7 @@ class KNNModel:
             return "%.2f%%" % accuracy
         
         except Exception as e:
-            raise Exception(f'Ocorreu um erro durante a avaliação: {e}')
+            raise Exception(f'Erro durante a avaliação: {e}')
 
 
     def train_and_evaluate(self, X, Y, test_size=0.3, train_size=0.7):

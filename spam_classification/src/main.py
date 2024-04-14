@@ -11,9 +11,9 @@ try:
     numeric_cols = ['Message']
     categorical_cols = ['Category']
 
-    model = DataModel('db/spam_text_message.datas', numeric_cols, categorical_cols)
+    model = DataModel('db/spam_text_message.data', numeric_cols, categorical_cols)
 
     variable_k(model.data, knn_values)
 
 except Exception as e:
-    print(f'Ocorreu um erro:\n {e}')
+    print(f'Ocorreu um erro:\n{e}')

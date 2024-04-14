@@ -16,10 +16,10 @@ class DataModel:
             raise FileNotFoundError(f'O arquivo {self.file_path} não foi encontrado.')
         
         except pd.errors.ParserError:
-            raise Exception(f'Ocorreu um erro ao analisar o arquivo {self.file_path}.')
+            raise Exception(f'Erro ao analisar o arquivo {self.file_path}.')
         
         except Exception as e:
-            raise Exception(f'Ocorreu um erro ao tentar ler o arquivo: {e}')
+            raise Exception(f'Erro ao tentar ler o arquivo: {e}')
     
 
     def normalize_data(self):
@@ -32,4 +32,4 @@ class DataModel:
             return data
         
         except Exception as e:
-            raise Exception(f'Ocorreu um erro na normalização: {e}')
+            raise Exception(f'Erro na normalização: {e}')
