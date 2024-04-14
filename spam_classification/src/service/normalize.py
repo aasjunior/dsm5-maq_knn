@@ -18,7 +18,7 @@ def normalize_data(model):
         return data_normalized, labels
     
     except Exception as e:
-        print(f'Ocorreu um erro na normalização dos dados: {e}')
+        raise Exception(f'Ocorreu um erro na normalização dos dados: {e}')
 
 
 def encode_labels(model):
@@ -29,7 +29,7 @@ def encode_labels(model):
         return labels
 
     except Exception as e:
-        print(f'Ocorreu um erro na conversão dos rótulos: {e}')
+        raise Exception(f'Ocorreu um erro na conversão dos rótulos: {e}')
 
 
 def preprocess_message(message):
@@ -43,7 +43,7 @@ def preprocess_message(message):
         return message
     
     except Exception as e:
-        print(f'Ocorreu um erro no pré-processamento dos dados: {e}')
+        raise Exception(f'Ocorreu um erro no pré-processamento dos dados: {e}')
 
 
 def save_data(data_normalized):
@@ -52,4 +52,4 @@ def save_data(data_normalized):
             dump(data_normalized, filehandle)
 
     except Exception as e:
-        print(f'Ocorreu um erro ao tentar salvar o arquivo: {e}')
+        raise Exception(f'Ocorreu um erro ao tentar salvar o arquivo: {e}')

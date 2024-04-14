@@ -9,7 +9,7 @@ def variable_k(data, knn_values):
             knn = KNNModel(data, k)
             accuracy = knn.train_and_evaluate(X, Y, knn_values['test_size'], knn_values['train_size'])
 
-            print(f"Para k={k}, a acurácia foi de {accuracy}")
-    
+            print(f'Para k={k}, a acurácia foi de {accuracy}')
+        
     except Exception as e:
-        print(f'Ocorreu um erro: {e}')
+        raise Exception(f'Ocorreu um erro: {e}')
