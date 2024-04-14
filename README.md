@@ -13,9 +13,9 @@ Modelos:
 
 - `__init__(self, file_path, numeric_cols, categorical_cols)`: Este é o construtor da classe. Ele é chamado quando um objeto `DataModel` é criado e recebe o caminho do arquivo, as colunas numéricas e as colunas categóricas como argumentos.
 
-- `load_data(self)`: Esta função tenta ler o arquivo CSV especificado no construtor. Se ocorrer um erro durante a leitura do arquivo, ela lança uma exceção.
+- `load_data(self)`: Esta função tenta ler o arquivo CSV especificado no construtor. 
 
-- `normalize_data(self)`: Esta função normaliza os dados removendo linhas duplicadas e com valores ausentes. Se ocorrer um erro durante a normalização, ela lança uma exceção.
+- `normalize_data(self)`: Esta função normaliza os dados removendo linhas duplicadas e com valores ausentes. 
 
 <br>
 
