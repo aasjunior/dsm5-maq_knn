@@ -3,9 +3,11 @@
 
 **Base URL:** &nbsp;[Dataset Kaggle](https://www.kaggle.com/datasets/team-ai/spam-text-message-classification/data)
 
-**Quantidade de atributos**: 1
+**Quantidade de atributos:** 1
 
 **Tipos de dados dos atributos:** Mensagens de texto (e-mail) 
+
+**Instâncias:** 5574
 
 **Classes:**
 
