@@ -86,12 +86,14 @@ class KNNModel:
         self.neighboor = neighboor
         self.knn = KNeighborsClassifier(self.neighboor)
 
+
     def train(self, X_train, Y_train):
         try:
             self.knn.fit(X_train, Y_train)
         
         except Exception as e:
             raise Exception(f'Erro no treinamento: {e}')
+
 
     def predict(self, X_test):
         try:
