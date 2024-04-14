@@ -7,7 +7,7 @@
 
 **Tipos de dados dos atributos:** Mensagens de texto (e-mail) 
 
-**Instâncias:** 5574
+**Instâncias:** 5572
 
 **Classes:**
 
@@ -90,9 +90,10 @@ def preprocess_message(message):
 <p align='justify'>Para análise paramétrica do algoritmo KNN, é utilizada a função <code>variable_k</code>:</p>
 
 1. Recebe os dados e um dicionário de valores para o algoritmo KNN como argumentos.
-2. Para cada valor de `k` no dicionário, normaliza os dados, treina um modelo KNN e avalia sua acurácia.
-3. Imprime a acurácia do modelo para cada valor de `k`.
-4. Se ocorrer um erro em qualquer parte do processo, lança uma exceção.
+2. Normaliza os dados usando a função `normalize_data`, retorna os atributos (X) e as classes (Y)
+3. Para cada valor de `k` no dicionário, treina um modelo KNN e avalia sua acurácia.
+4. Imprime a acurácia do modelo para cada valor de `k`.
+5. Se ocorrer um erro em qualquer parte do processo, lança uma exceção.
 
 <br>
 
@@ -102,9 +103,9 @@ from .normalize import normalize_data
 
 def variable_k(data, knn_values):
     try:
+        X, Y = normalize_data(data)
+        
         for k in knn_values['neighboors']:
-            X, Y = normalize_data(data)
-
             knn = KNNModel(data, k)
             accuracy = knn.train_and_evaluate(X, Y, knn_values['test_size'], knn_values['train_size'])
 
@@ -145,22 +146,28 @@ except Exception as e:
 
 ```Terminal
 # 1ª)
-Para k=3, a acurácia foi de 91.41%
-Para k=5, a acurácia foi de 91.09%
-Para k=7, a acurácia foi de 89.99%
+
+Para k=3, a acurácia foi de 91.73%
+Para k=5, a acurácia foi de 90.63%
+Para k=7, a acurácia foi de 90.83%
 
 # 2ª)
-Para k=3, a acurácia foi de 89.92%
-Para k=5, a acurácia foi de 91.09%
-Para k=7, a acurácia foi de 89.08%
+Para k=3, a acurácia foi de 91.21%
+Para k=5, a acurácia foi de 91.41%
+Para k=7, a acurácia foi de 89.92%
 
 # 3ª)
-Para k=3, a acurácia foi de 92.51%
-Para k=5, a acurácia foi de 90.70%
-Para k=7, a acurácia foi de 88.70%
+Para k=3, a acurácia foi de 91.21%
+Para k=5, a acurácia foi de 90.25%
+Para k=7, a acurácia foi de 88.82%
 
 # 4ª)
-Para k=3, a acurácia foi de 92.89%
-Para k=5, a acurácia foi de 90.25%
-Para k=7, a acurácia foi de 89.41%
+Para k=3, a acurácia foi de 92.57%
+Para k=5, a acurácia foi de 90.63%
+Para k=7, a acurácia foi de 89.15%
+
+# 5ª)
+Para k=3, a acurácia foi de 91.73%
+Para k=5, a acurácia foi de 90.57%
+Para k=7, a acurácia foi de 89.08%
 ```
