@@ -12,4 +12,4 @@ def variable_k(data, knn_values):
             print(f'Para k={k}, a acurácia foi de {accuracy}')
         
     except Exception as e:
-        raise Exception(f'Ocorreu um erro: {e}')
+        raise Exception(f'Erro na execução de variação de vizinhos: {e}')
