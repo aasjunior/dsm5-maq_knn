@@ -21,12 +21,12 @@
 
 <p align='justify'>Para normalização dos dados, além do método <code>normalize_data</code> da classe <code>DataModel</code>, também foi criado o serviço de normalização para atender a base de dados específica:</p>
 
-- `preprocess_message(self, message)`: Esta função recebe uma mensagem como entrada e realiza duas operações de pré-processamento:
+- `preprocess_message(message)`: Esta função recebe uma mensagem como entrada e realiza duas operações de pré-processamento:
     - Remove caracteres não alfabéticos da mensagem usando uma expressão regular.
     - Converte a mensagem para letras minúsculas.
     - Retorna a mensagem pré-processada.
 
-- `encode_labels(self, model)`: Esta função recebe o modelo de dados como entrada e codifica os rótulos da categoria usando o `LabelEncoder` do scikit-learn. Retorna os rótulos codificados.
+- `encode_labels(model)`: Esta função recebe o modelo de dados como entrada e codifica os rótulos da categoria usando o `LabelEncoder` do scikit-learn. Retorna os rótulos codificados.
 
 - `normalize_data(model)`: Esta função recebe o modelo de dados como entrada e realiza várias operações para normalizar os dados:
     - Aplica a função `preprocess_message` a cada mensagem no modelo de dados.
