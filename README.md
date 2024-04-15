@@ -33,7 +33,7 @@ pip install -r requirements.txt
 ```Python
 python main.py
 ```
-
+<br>
 
 ## Algoritmo KNN
 
@@ -187,6 +187,8 @@ class KNNModel:
         return self.evaluate(Y_test, predictions)
 ```
 <br>
+
+<hr>
 
 ###### Aviso
 Este é um trabalho acadêmico realizado como tarefa da disciplina de de Aprendizado de Máquina no 5º Semestre de Desenvolvimento de Software Multiplataforma
