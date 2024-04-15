@@ -7,6 +7,34 @@ Modelos:
 
 <br>
 
+## Como rodar?
+
+###### Requisitos de Software
+
+- Python
+- VSCode
+
+### Instalação
+
+1. Clone o repositório para o seu computador:
+
+```
+git clone https://github.com/aasjunior/dsm5-maq_knn.git
+```
+
+2. Abra o projeto pelo VSCode e execute o comando pelo terminal: 
+
+```
+pip install -r requirements.txt
+```
+
+3. Navegue até os diretórios dos algoritmos de classificação e execute pelo comando:
+
+```Python
+python main.py
+```
+
+
 ## Algoritmo KNN
 
 ### Classe DataModel
@@ -158,5 +186,7 @@ class KNNModel:
 
         return self.evaluate(Y_test, predictions)
 ```
+<br>
 
-
+###### Aviso
+Este é um trabalho acadêmico realizado como tarefa da disciplina de de Aprendizado de Máquina no 5º Semestre de Desenvolvimento de Software Multiplataforma
