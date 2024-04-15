@@ -287,7 +287,13 @@ def variable_k(data, knn_values):
 
 ### Execução e avaliação
 
-<p align='justify'>Durante a execução, para as diferentes quantidades de vizinhos (k), foram apresentados diferentes valores de acurácia. Embora na maioria das execuções tenha indicado que o menor número de vizinhos resulta em um valor maior na acurácia, não foi unanime em todos os casos.</p>
+<p align='justify'>Durante a execução, para as diferentes quantidades de vizinhos (<code>k</code>), foram apresentados diferentes valores de acurácia, o que indica que a acurácia do modelo é sensível ao valor de <code>k</code> escolhido.</p>
+
+- Para `k=3`, a acurácia variou de **46.11%** a **60.56%**;
+- Para `k=5`, a acurácia variou de **47.78%** a **60.33%**; 
+- E para `k=7`, a acurácia variou de **54.89%** a **61.50%**.
+
+<p align=‘justify’>No entanto, não foi observada uma tendência clara que indicasse que um valor específico de <code>k</code> sempre resulta em uma acurácia mais alta. Em algumas execuções, um valor menor de <code>k</code> resultou em uma acurácia mais alta, enquanto em outras, um valor maior de <code>k</code> foi melhor. Isso sugere que o valor ótimo de <code>k</code> pode depender do conjunto de dados específico e da distribuição dos dados.</p>
 
 ```Python
 from model.DataModel import DataModel
